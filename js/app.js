@@ -4,56 +4,97 @@
 
 /* ---------- Project data ---------- */
 const PROJECTS = [
-  {
-    slug: "medical",
-    category: "Desktop + Web",
-    name: "Medical Store Management System",
-    shortDesc: "A complete pharmacy platform for billing, batch/expiry tracking and prescription management.",
-    tech: ["ASP.NET Core", "WPF", "SQL Server", "Entity Framework", "JWT"],
-    overview:
-      "A full-featured management system built for retail pharmacies, covering point-of-sale billing, inventory with batch and expiry tracking, supplier purchase orders and prescription records. Built as a hybrid solution with a WPF counter application for fast in-store billing and an ASP.NET Core web dashboard for owners to monitor multiple branches remotely.",
-    problem:
-      "The pharmacy was tracking stock, expiry dates and sales manually in registers, leading to frequent stockouts of critical medicines, expired inventory being sold unknowingly, and no visibility into daily sales across branches.",
-    solution:
-      "I designed a batch-level inventory model tied to expiry dates with automated low-stock and near-expiry alerts, built a fast offline-capable WPF billing screen optimized for barcode scanners, and layered a secure REST API so a web dashboard could give the owner real-time visibility across all branches.",
-    features: [
-      "Barcode-driven point-of-sale billing with receipt printing",
-      "Batch-wise stock tracking with expiry and low-stock alerts",
-      "Supplier and purchase order management",
-      "Prescription record keeping linked to customer profiles",
-      "Multi-branch sales dashboard with daily/weekly/monthly reports",
-      "Role-based access for cashiers, pharmacists and admins",
-    ],
-    challenges:
-      "Keeping the WPF billing screen fully responsive during high-volume checkout while syncing stock changes to the central database required careful use of async operations and local caching to avoid UI freezes during network latency.",
-    results:
-      "Reduced expired-stock losses to near zero through proactive alerts, cut average checkout time by 40% with barcode scanning, and gave the owner a single dashboard to monitor all branches instead of daily phone calls.",
-  },
-  {
-    slug: "airline",
-    category: "Web Application",
-    name: "Airline Management Software",
-    shortDesc: "Flight scheduling, seat allocation and ticket booking platform for a regional carrier.",
-    tech: ["ASP.NET Core MVC", "SQL Server", "Entity Framework", "REST API", "Bootstrap"],
-    overview:
-      "An airline operations platform covering flight scheduling, dynamic seat maps, ticket booking and check-in, built for a regional carrier that previously coordinated bookings through spreadsheets and phone calls.",
-    problem:
-      "Manual seat allocation caused frequent double-bookings, staff had no unified view of flight schedules across routes, and ticket pricing changes had to be communicated manually to every booking agent.",
-    solution:
-      "I built a relational scheduling engine that locks seats during the booking transaction to eliminate double-booking, an interactive seat-map component for agents and passengers, and a centralized fare-rules engine so price changes apply instantly everywhere.",
-    features: [
-      "Interactive visual seat map with real-time availability",
-      "Multi-route flight scheduling with recurring flight templates",
-      "Ticket booking, cancellation and refund workflows",
-      "Dynamic fare rules by route, season and booking class",
-      "Passenger check-in and boarding pass generation",
-      "Admin reporting on load factor and route profitability",
-    ],
-    challenges:
-      "Preventing race conditions when two agents tried to book the same seat simultaneously required implementing transactional row-locking at the database level combined with optimistic concurrency checks in the API.",
-    results:
-      "Eliminated double-booking incidents entirely, reduced booking time per passenger from minutes to under 30 seconds, and gave management route-level profitability reports for the first time.",
-  },
+{
+  slug: "medical",
+  category: "Desktop Application",
+  name: "Medical Store Management System",
+  galleryCount: 18,
+  imageExt: "png",
+
+  shortDesc:
+    "A complete offline pharmacy management system for billing, inventory, purchases, credit management, and expiry tracking.",
+
+  tech: [
+    ".NET 8",
+    "WPF",
+    "SQLite",
+    "Entity Framework Core",
+    "BCrypt",
+    "Clean Architecture",
+  ],
+
+  overview:
+    "A professional Medical Store Management System built as a 100% offline Windows desktop application for pharmacies and medical stores. The system manages medicine inventory, sales, purchases, customer credit, supplier records, business reports, subscription licensing, and secure backup & restore using an embedded SQLite database.",
+
+  problem:
+    "Many pharmacies rely on manual registers or spreadsheets to manage inventory, purchases, customer dues, and medicine expiry dates. This often leads to inaccurate stock levels, expired medicines remaining on shelves, delayed purchasing decisions, and difficulty tracking daily business performance.",
+
+  solution:
+    "I developed a fully offline WPF desktop application powered by SQLite and Entity Framework Core. The system automates medicine inventory with FEFO batch tracking, manages sales and purchases, customer credit settlements, supplier records, user permissions, subscription licensing, and secure password-protected backups without requiring an internet connection.",
+
+  features: [
+    "100% Offline Desktop Application",
+    "Sales & POS Billing",
+    "Medicine Inventory Management",
+    "Batch & FEFO Expiry Tracking",
+    "Low Stock & Near Expiry Alerts",
+    "Purchase & Supplier Management",
+    "Customer Credit & Wallet Settlement",
+    "Sales, Purchase & Profit Reports",
+    "User Roles & Permissions",
+    "Subscription & License Management",
+    "Password-Protected Backup & Restore",
+    "SQLite Embedded Database",
+  ],
+
+  challenges:
+    "Designing an efficient offline architecture while maintaining fast inventory operations, accurate FEFO batch deduction, reliable customer credit tracking, and secure backup & restore functionality without compromising application performance.",
+
+  results:
+    "Delivered a fast and reliable offline pharmacy management solution that simplifies daily operations, improves inventory accuracy, reduces expired stock through automated alerts, secures business data with encrypted backups, and enables pharmacy owners to manage their entire store from a single lightweight desktop application.",
+},
+{
+  slug: "finebook",
+  category: "Finance Application",
+  name: "FineBook – Personal Finance Management Platform",
+  galleryCount: 14,
+  imageExt: "png",
+  shortDesc:
+    "Offline-first personal finance platform with wallets, expense tracking, reports, and a hidden double-entry accounting engine.",
+  tech: [
+    "ASP.NET Core 8 Web API",
+    ".NET MAUI",
+    "SQL Server",
+    "Entity Framework Core",
+    "SQLite",
+    "JWT",
+    "REST API"
+  ],
+  overview:
+    "FineBook is a modern personal finance platform designed for individuals and small businesses to manage wallets, income, expenses, transfers, and financial reports through a simple user experience. Behind the scenes, the application maintains a professional double-entry accounting engine while keeping accounting concepts completely hidden from end users.",
+  problem:
+    "Traditional accounting software is too complex for everyday users, while many expense tracker apps lack offline capability, secure synchronization, structured financial reporting, and a scalable accounting foundation.",
+  solution:
+    "I designed and developed an offline-first finance platform with secure authentication, wallet management, income, expense and transfer tracking, automatic double-entry posting, background synchronization, encrypted API communication, and a clean Material Design user experience built on a scalable Clean Architecture.",
+  features: [
+    "Offline-first architecture with SQLite synchronization",
+    "Wallet management with automatic balance calculation",
+    "Income, Expense and Transfer transactions",
+    "Automatic double-entry accounting engine",
+    "Interactive financial dashboard with analytics",
+    "Financial Summary, Account Statement, Income/Expense and Category reports",
+    "JWT authentication with OTP verification",
+    "7-day trial subscription activation",
+    "Secure AES-256 encrypted API communication",
+    "Role-based Super Admin management",
+    "Soft-delete with complete audit trail",
+    "Material Design 3 responsive mobile experience"
+  ],
+  challenges:
+    "Building an offline-first financial platform while preserving accounting accuracy required implementing transactional posting, secure synchronization, conflict handling, user data isolation, encrypted communication, and automatic balance consistency across both local and server databases.",
+  results:
+    "Delivered a scalable finance platform with fast offline performance, secure synchronization, complete user data isolation, automatic accounting accuracy through double-entry posting, and a simple user experience that hides financial complexity from end users."
+},
   {
     slug: "accounting",
     category: "Web + Desktop",
@@ -131,14 +172,18 @@ const PROJECTS = [
   },
 ];
 
-const GALLERY_COUNT = 8;
+const GALLERY_COUNT_DEFAULT = 8;
+const IMAGE_EXT_DEFAULT = "svg";
 
 function projectAssets(slug) {
+  const project = PROJECTS.find((p) => p.slug === slug);
+  const ext = project?.imageExt || IMAGE_EXT_DEFAULT;
+  const count = project?.galleryCount || GALLERY_COUNT_DEFAULT;
   const base = `assets/screenshots/${slug}`;
   return {
-    banner: `${base}/banner.svg`,
-    thumb: `${base}/thumb.svg`,
-    gallery: Array.from({ length: GALLERY_COUNT }, (_, i) => `${base}/screen-${i + 1}.svg`),
+    banner: `${base}/banner.${ext}`,
+    thumb: `${base}/thumb.${ext}`,
+    gallery: Array.from({ length: count }, (_, i) => `${base}/screen-${i + 1}.${ext}`),
   };
 }
 
