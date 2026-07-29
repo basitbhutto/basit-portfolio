@@ -95,31 +95,58 @@ const PROJECTS = [
   results:
     "Delivered a scalable finance platform with fast offline performance, secure synchronization, complete user data isolation, automatic accounting accuracy through double-entry posting, and a simple user experience that hides financial complexity from end users."
 },
-  {
-    slug: "accounting",
-    category: "Web + Desktop",
-    name: "Accounting Management System",
-    shortDesc: "Double-entry ledgers, invoicing, and financial reporting for small and mid-sized businesses.",
-    tech: [".NET 8", "ASP.NET Core", "Entity Framework", "SQL Server", "Clean Architecture"],
-    overview:
-      "A double-entry accounting system covering general ledgers, accounts receivable/payable, invoicing and tax-ready financial statements, designed for small and mid-sized trading businesses moving off manual bookkeeping.",
-    problem:
-      "The business was reconciling accounts manually in spreadsheets every month-end, which was error-prone, slow, and made it nearly impossible to produce accurate profit and loss statements on demand.",
-    solution:
-      "I implemented a proper double-entry ledger engine following standard accounting principles, automated invoice-to-ledger posting, and built report generators for trial balance, P&L and balance sheet that update in real time as transactions are entered.",
-    features: [
-      "Double-entry general ledger with automatic balancing",
-      "Sales and purchase invoicing with tax calculation",
-      "Accounts receivable and payable aging reports",
-      "Real-time trial balance, P&L and balance sheet",
-      "Bank reconciliation module",
-      "Multi-user access with audit trail on every transaction",
-    ],
-    challenges:
-      "Designing a ledger schema flexible enough to support custom chart-of-accounts structures per client, while still enforcing strict double-entry integrity, took several iterations of the data model before it was both flexible and safe.",
-    results:
-      "Cut month-end closing time from days to hours, eliminated reconciliation errors caused by manual entry, and gave management on-demand financial statements instead of waiting for a monthly report.",
-  },
+{
+  slug: "magazine",
+  category: "Web Application",
+  name: "Digital Magazine & Guide Publishing Platform",
+  galleryCount: 18,
+  imageExt: "png",
+
+  shortDesc:
+    "A full-featured digital magazine marketplace where publishers upload and sell e-guides/magazines, and customers browse, favorite, and purchase PDF content online.",
+
+  tech: [
+    ".NET 10",
+    "ASP.NET Core MVC",
+    "SQL Server",
+    "Entity Framework Core",
+    "ASP.NET Core Identity",
+    "Clean/Layered Architecture",
+  ],
+
+  overview:
+    "A complete digital magazine and e-guide publishing platform built with ASP.NET Core MVC and SQL Server. The system lets admins and uploaders publish priced digital magazines with cover images, PDF files, and categories, while customers browse a public catalog, favorite guides, and complete checkout to access purchased content — all backed by role-based authentication and a layered N-tier architecture (Entities, Repository, Web).",
+
+  problem:
+    "Independent publishers and small magazine businesses often lack an affordable, dedicated platform to sell digital magazines and guides online. They're forced to rely on generic file-sharing or manual PDF distribution, which offers no catalog structure, no pricing/discount control, no user accounts, and no way to track sales, favorites, or publishing activity.",
+
+  solution:
+    "I built a role-based ASP.NET Core MVC platform on .NET 10 with a clean Entities/Repository/Web layered architecture. Admins and uploaders manage a full guide catalog (title, slug, summary, cover image, PDF, category, current/old price) through a secured admin CMS, while customers browse published guides, save favorites, and check out to purchase. ASP.NET Core Identity handles authentication with granular policies (AdminOnly, UploaderAccess, CustomerAccess), and a custom FileService validates and stores cover images and PDFs with strict size/type limits.",
+
+  features: [
+    "Digital Guide/Magazine Catalog with Slugs & Categories",
+    "Cover Image & PDF Upload with Validation",
+    "Pricing & Discount (Old/Current Price) Support",
+    "Role-Based Access (Admin, SuperAdmin, Uploader, Customer)",
+    "Admin CMS for Guide & Category Management",
+    "Public Storefront with Guide Detail Pages",
+    "Checkout / Purchase Flow",
+    "User Favorites (Bookmarking)",
+    "Customer Dashboard & Profile Management",
+    "Activity & System Audit Logging",
+    "ASP.NET Core Identity Authentication",
+    "SQL Server + Entity Framework Core (Repository Pattern)",
+  ],
+
+  challenges:
+    "Designing a clean layered architecture that cleanly separates domain entities, data access, and presentation logic, while enforcing strict role-based access across admin, uploader, and customer flows, and safely handling large file uploads (cover images up to 5MB, PDFs up to 50MB) without compromising performance or security.",
+
+  results:
+    "Delivered a production-ready digital magazine marketplace that gives publishers full control over their catalog and pricing, provides customers with a smooth browsing-to-checkout experience, and maintains data integrity and accountability through role-based permissions and detailed activity logging.",
+},
+
+
+
   {
     slug: "crm",
     category: "Web Application",
