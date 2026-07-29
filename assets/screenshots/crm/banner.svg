@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g18255" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="overlayg18255" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050816" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#0F172A"/>
+  <rect width="1600" height="900" fill="url(#g18255)" opacity="0.85"/>
+  <g opacity="0.08">
+        <circle cx="192" cy="180" r="54" fill="#fff"/>
+        <circle cx="1360" cy="675" r="90" fill="#fff"/>
+        <rect x="960" y="90" width="240" height="135" rx="12" fill="#fff" transform="rotate(15 960 90)"/>
+      </g>
+  <rect width="1600" height="900" fill="url(#overlayg18255)"/>
+  <rect x="0" y="0" width="1600" height="900" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <text x="50%" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="63.00000000000001" font-weight="700" fill="#ffffff">CRM System</text>
+  <text x="50%" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.500000000000004" fill="rgba(255,255,255,0.85)">Project Banner</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g56633" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="overlayg56633" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050816" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <rect width="1200" height="630" fill="url(#g56633)" opacity="0.85"/>
+  <g opacity="0.08">
+        <circle cx="144" cy="126" r="37.8" fill="#fff"/>
+        <circle cx="1020" cy="472.5" r="63" fill="#fff"/>
+        <rect x="720" y="63" width="180" height="94.5" rx="12" fill="#fff" transform="rotate(15 720 63)"/>
+      </g>
+  <rect width="1200" height="630" fill="url(#overlayg56633)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <text x="50%" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="44.1" font-weight="700" fill="#ffffff">Abdul Basit</text>
+  <text x="50%" y="349" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.05" fill="rgba(255,255,255,0.85)">Full Stack .NET Developer</text>
+</svg>

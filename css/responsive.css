@@ -1,0 +1,55 @@
+/* =========================================================
+   responsive.css — breakpoints: desktop, laptop, tablet, mobile
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  :root { --container-width: 100%; }
+  .about-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+  .about-portrait { max-width: 320px; margin: 0 auto; }
+  .about-text p { margin-left: auto; margin-right: auto; }
+  .about-stats { justify-content: center; }
+}
+
+@media (max-width: 992px) {
+  .hero-bgtext { font-size: clamp(2.6rem, 11vw, 5rem); }
+  .services-head, .projects-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .connect-grid { grid-template-columns: 1fr; }
+  .modal-columns { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .floating-nav { top: 16px; width: calc(100% - 32px); }
+  .nav-pill, .nav-dropdown { width: 100%; }
+  .hero { padding: 130px 24px 60px; gap: 20px; }
+  .about { padding: 40px 24px 70px; }
+  .services { padding: 50px 24px 70px; }
+  .projects, .contact { padding: 40px 24px 70px; }
+  .service-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .service-tags { text-align: left; }
+  .hero-meta {
+    position: static;
+    margin-top: 34px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    left: auto; right: auto; bottom: auto;
+  }
+  .hero-decor { display: none; }
+  .footer-columns { gap: 40px; }
+  .modal-body { padding: 26px 22px; }
+  .modal-banner { height: 220px; }
+  .modal-title { left: 22px; bottom: 18px; }
+  .back-to-top { right: 18px; bottom: 18px; width: 44px; height: 44px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 20px; }
+  .nav-pill-logo { font-size: 1rem; }
+  .hero-portrait-wrap { width: 42vw; }
+  .about-greeting h2 { font-size: 2.4rem; }
+  .connect-card { padding: 20px; gap: 14px; }
+  .footer-watermark { font-size: 3.6rem; }
+  .gallery-btn { width: 36px; height: 36px; }
+}

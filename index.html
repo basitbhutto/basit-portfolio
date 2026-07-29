@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Basit | Full Stack .NET Developer &mdash; Desktop, Web &amp; Android Solutions</title>
+  <meta name="title" content="Abdul Basit | Full Stack .NET Developer" />
+  <meta name="description" content="Abdul Basit is a Full Stack .NET Developer building premium Desktop, Web, and Android applications, REST APIs, and business software including ERP, CRM, and Accounting solutions. 20+ projects delivered." />
+  <meta name="keywords" content="Abdul Basit, .NET Developer, ASP.NET Core Developer, Full Stack Developer Pakistan, WPF Developer, WinForms Developer, .NET MAUI Developer, REST API Developer, ERP Software Developer, CRM Developer, Software Consultant" />
+  <meta name="author" content="Abdul Basit" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://abdulbasit.dev/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abdulbasit.dev/" />
+  <meta property="og:title" content="Abdul Basit | Full Stack .NET Developer" />
+  <meta property="og:description" content="Building premium Desktop, Web, and Android applications, REST APIs, and business software. Explore 20+ real-world projects delivered across 5+ business domains." />
+  <meta property="og:image" content="assets/images/og-image.svg" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abdul Basit | Full Stack .NET Developer" />
+  <meta name="twitter:description" content="Full Stack .NET Developer crafting Desktop, Web &amp; Android software, REST APIs and enterprise business solutions." />
+  <meta name="twitter:image" content="assets/images/og-image.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo/favicon.svg" />
+  <meta name="theme-color" content="#F3F1EA" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdul Basit",
+    "jobTitle": "Full Stack .NET Developer",
+    "description": "Full Stack .NET Developer specializing in Desktop, Web and Android applications, REST APIs and enterprise business software.",
+    "url": "https://abdulbasit.dev/",
+    "email": "mailto:basit.bhutto786@gmail.com",
+    "sameAs": ["https://github.com/", "https://www.linkedin.com/", "https://www.facebook.com/"],
+    "knowsAbout": ["ASP.NET Core", ".NET 8", ".NET 9", "WPF", "WinForms", ".NET MAUI", "REST API", "SQL Server", "Entity Framework", "Clean Architecture"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">Basit</span>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ================= FLOATING NAV ================= -->
+  <div class="floating-nav" id="floatingNav">
+    <div class="nav-pill">
+      <a href="#home" class="nav-pill-logo">Basit</a>
+      <button class="nav-pill-toggle" id="navPillToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDropdown">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-dropdown" id="navDropdown" aria-label="Primary">
+      <a href="#about" class="nav-drop-link" data-nav="about">About Me</a>
+      <a href="#services" class="nav-drop-link" data-nav="services">Services</a>
+      <a href="#projects" class="nav-drop-link" data-nav="projects">Projects</a>
+      <a href="#contact" class="nav-drop-link" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="mainContent">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero-decor decor-1" aria-hidden="true">
+        <svg viewBox="0 0 60 60" fill="none"><path d="M30 0c2 14 6 18 20 20-14 2-18 6-20 20-2-14-6-18-20-20 14-2 18-6 20-20z" fill="currentColor"/></svg>
+      </div>
+      <div class="hero-decor decor-2" aria-hidden="true">
+        <svg viewBox="0 0 60 60" fill="none"><path d="M8 4l6 20 20 6-20 6-6 20-6-20L-18 30l20-6z" fill="currentColor" transform="translate(18 0)"/></svg>
+      </div>
+
+      <div class="hero-portrait-wrap">
+        <div class="flip-card" id="heroFlipCard">
+          <div class="flip-card-inner" id="heroFlipInner">
+            <img src="assets/images/about-photo.png" alt="Abdul Basit, Full Stack .NET Developer" class="flip-face flip-face-front" width="700" height="820" />
+            <img src="assets/images/about2-photo.png" alt="Abdul Basit, Full Stack .NET Developer" class="flip-face flip-face-back" width="700" height="820" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hero-bgtext" aria-label="Full Stack .NET Engineer">
+        <span>Full Stack</span>
+        <span>.NET Engineer</span>
+      </h1>
+
+      <div class="hero-meta">
+        <span class="hero-copyright"> </span>
+        <span class="hero-status"><span class="status-dot"></span> Available for select projects</span>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+      <div class="about-grid">
+<div class="about-text" style="margin-top: 120px;">
+<h2 style="margin-bottom: 120px;">Hello.</h2>                  <div class="about-text" data-reveal="fade-up" data-reveal-delay="160">
+
+            <p>
+            I'm Abdul Basit, a Full Stack .NET Developer based in Pakistan, currently building business software
+            that real companies run on every day.
+          </p>
+                  </div>
+        </div>
+
+        <div class="about-portrait" data-reveal="fade-up" data-reveal-delay="80">
+          <img src="assets/images/about2-photo.png" alt="Portrait of Abdul Basit" width="700" height="820" loading="lazy" />
+        </div>
+
+        <div class="about-text" data-reveal="fade-up" data-reveal-delay="160">
+        
+          <p>
+            Over the last 3+ years I've shipped 20+ Desktop, Web and Android applications &mdash; ERP, CRM,
+            accounting and medical-store systems &mdash; backed by clean architecture and secure REST APIs,
+            helping businesses replace spreadsheets and manual processes with real software.
+          </p>
+          <a href="#projects" class="about-cta-link">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <div class="about-stats">
+            <div class="about-stat"><span>20+</span>Projects Delivered</div>
+            <div class="about-stat"><span>5+</span>Years Experience</div>
+            <div class="about-stat"><span>5+</span>Business Domains</div>
+            <div class="about-stat"><span>100%</span>Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="services" id="services">
+      <div class="services-head" data-reveal="fade-up">
+        <h2>Services</h2>
+      </div>
+
+      <div class="services-list">
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="0">
+          <h3>Desktop Software Development</h3>
+          <span class="service-tags">WinForms &bull; WPF &bull; Offline-Ready</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="20">
+          <h3>Custom Web Applications</h3>
+          <span class="service-tags">ASP.NET Core &bull; Secure &bull; Tailored</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="40">
+          <h3>Enterprise Software</h3>
+          <span class="service-tags">Clean Architecture &bull; Scalable &bull; Maintainable</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="60">
+          <h3>ERP Solutions</h3>
+          <span class="service-tags">Inventory &bull; Operations &bull; Planning</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="80">
+          <h3>CRM Systems</h3>
+          <span class="service-tags">Leads &bull; Pipeline &bull; Follow-ups</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="100">
+          <h3>Inventory Systems</h3>
+          <span class="service-tags">Stock Tracking &bull; Purchase Orders &bull; Alerts</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="120">
+          <h3>Medical Store Software</h3>
+          <span class="service-tags">Batch &amp; Expiry &bull; Billing &bull; Prescriptions</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="140">
+          <h3>Accounting Software</h3>
+          <span class="service-tags">Ledgers &bull; Invoicing &bull; Tax Reports</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="160">
+          <h3>Android Apps</h3>
+          <span class="service-tags">.NET MAUI &bull; Cross-Platform</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="180">
+          <h3>REST API Development</h3>
+          <span class="service-tags">JWT &bull; Documented &bull; Multi-Client</span>
+        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="200">
+          <h3>Database Design</h3>
+<span class="service-tags">SQL Server • Relational DB • NoSQL</span>        </div>
+        <div class="service-row" data-reveal="fade-up" data-reveal-delay="220">
+          <h3>Software Consulting</h3>
+          <span class="service-tags">Architecture Review &bull; Roadmap &bull; Strategy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="projects" id="projects">
+      <div class="projects-head" data-reveal="fade-up">
+        <h2>Featured Projects</h2>
+        <button class="view-all-btn" id="viewAllBtn">
+          <span id="viewAllLabel">View All Work</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project cards are populated by app.js from PROJECTS data -->
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="contact-head" data-reveal="fade-up">
+        <span class="section-tag" style="text-align:left">Get In Touch</span>
+        <h2>Let's Connect.</h2>
+        <p>Pick whichever platform works best for you &mdash; I usually reply within a few hours.</p>
+      </div>
+
+      <div class="connect-grid">
+        <a href="mailto:basit.bhutto786@gmail.com" class="connect-card" data-reveal="fade-up" data-reveal-delay="0">
+          <span class="connect-icon">G</span>
+          <span class="connect-info">
+            <span class="connect-label">Gmail</span>
+            <span class="connect-value">basit.bhutto786@gmail.com</span>
+          </span>
+          <span class="connect-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="https://wa.me/923133334470" target="_blank" rel="noopener noreferrer" class="connect-card" data-reveal="fade-up" data-reveal-delay="60">
+          <span class="connect-icon">W</span>
+          <span class="connect-info">
+            <span class="connect-label">WhatsApp</span>
+            <span class="connect-value">0313 3334470</span>
+          </span>
+          <span class="connect-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="https://www.fiverr.com/basit_bhutto/buying?source=avatar_menu_profile" target="_blank" rel="noopener noreferrer" class="connect-card" data-reveal="fade-up" data-reveal-delay="120">
+          <span class="connect-icon">Fi</span>
+          <span class="connect-info">
+            <span class="connect-label">Fiverr</span>
+            <span class="connect-value">Hire me on Fiverr</span>
+          </span>
+          <span class="connect-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="https://www.upwork.com/freelancers/~01c502fe3d6b1e00a9?mp_source=share" target="_blank" rel="noopener noreferrer" class="connect-card" data-reveal="fade-up" data-reveal-delay="180">
+          <span class="connect-icon">Up</span>
+          <span class="connect-info">
+            <span class="connect-label">Upwork</span>
+            <span class="connect-value">Hire me on Upwork</span>
+          </span>
+          <span class="connect-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/abdul-basit333/" target="_blank" rel="noopener noreferrer" class="connect-card" data-reveal="fade-up" data-reveal-delay="240">
+          <span class="connect-icon">in</span>
+          <span class="connect-info">
+            <span class="connect-label">LinkedIn</span>
+            <span class="connect-value">Connect with me</span>
+          </span>
+          <span class="connect-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="https://github.com/basitbhutto" target="_blank" rel="noopener noreferrer" class="connect-card" data-reveal="fade-up" data-reveal-delay="300">
+          <span class="connect-icon">Gh</span>
+          <span class="connect-info">
+            <span class="connect-label">GitHub</span>
+            <span class="connect-value">View my code</span>
+          </span>
+          <span class="connect-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <h2 class="footer-tagline">Building Software<br />That Scales With You.</h2>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <span class="footer-col-label">/ Quick Links</span>
+          <div class="footer-col-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-label">/ Connect</span>
+          <div class="footer-col-links">
+            <a href="mailto:basit.bhutto786@gmail.com">Gmail</a>
+            <a href="https://wa.me/923133334470" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.fiverr.com/basit_bhutto/buying?source=avatar_menu_profile" target="_blank" rel="noopener noreferrer">Fiverr</a>
+            <a href="https://www.upwork.com/freelancers/~01c502fe3d6b1e00a9?mp_source=share" target="_blank" rel="noopener noreferrer">Upwork</a>
+            <a href="https://www.linkedin.com/in/abdul-basit333/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/basitbhutto" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-watermark" aria-hidden="true">BASIT</div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Abdul Basit. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- ================= PROJECT MODAL ================= -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close project details">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="modal-banner">
+        <img id="modalBanner" src="" alt="" loading="lazy" />
+        <div class="modal-banner-overlay"></div>
+        <h2 id="modalTitle" class="modal-title"></h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-tech" id="modalTech"></div>
+
+        <div class="modal-section">
+          <h3>Overview</h3>
+          <p id="modalOverview"></p>
+        </div>
+
+        <div class="modal-columns">
+          <div class="modal-section">
+            <h3>Business Problem</h3>
+            <p id="modalProblem"></p>
+          </div>
+          <div class="modal-section">
+            <h3>Solution</h3>
+            <p id="modalSolution"></p>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h3>Key Features</h3>
+          <ul class="modal-list" id="modalFeatures"></ul>
+        </div>
+
+        <div class="modal-section">
+          <h3>Challenges</h3>
+          <p id="modalChallenges"></p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Results</h3>
+          <p id="modalResults"></p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Gallery</h3>
+          <div class="gallery-slider">
+            <div class="gallery-track" id="galleryTrack"></div>
+            <button class="gallery-btn gallery-prev" id="galleryPrev" aria-label="Previous screenshot">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="gallery-btn gallery-next" id="galleryNext" aria-label="Next screenshot">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <span class="gallery-counter" id="galleryCounter">1 / 8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/slider.js" defer></script>
+  <script src="js/animation.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

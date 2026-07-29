@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="820" viewBox="0 0 700 820">
+  <defs>
+    <linearGradient id="g56633" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="overlayg56633" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050816" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="820" fill="#0F172A"/>
+  <rect width="700" height="820" fill="url(#g56633)" opacity="0.85"/>
+  
+  <rect width="700" height="820" fill="url(#overlayg56633)"/>
+  <rect x="0" y="0" width="700" height="820" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <text x="50%" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="49.00000000000001" font-weight="700" fill="#ffffff">Abdul Basit</text>
+  <text x="50%" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.500000000000004" fill="rgba(255,255,255,0.85)">.NET Developer</text>
+</svg>

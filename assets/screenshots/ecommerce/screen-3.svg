@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="g72144" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="overlayg72144" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050816" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="#0F172A"/>
+  <rect width="1280" height="800" fill="url(#g72144)" opacity="0.85"/>
+  <g opacity="0.08">
+        <circle cx="153.6" cy="160" r="48" fill="#fff"/>
+        <circle cx="1088" cy="600" r="80" fill="#fff"/>
+        <rect x="768" y="80" width="192" height="120" rx="12" fill="#fff" transform="rotate(15 768 80)"/>
+      </g>
+  <rect width="1280" height="800" fill="url(#overlayg72144)"/>
+  <rect x="0" y="0" width="1280" height="800" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <text x="50%" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="56.00000000000001" font-weight="700" fill="#ffffff">E-Commerce Platform</text>
+  <text x="50%" y="434" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.000000000000004" fill="rgba(255,255,255,0.85)">Data Management</text>
+</svg>
