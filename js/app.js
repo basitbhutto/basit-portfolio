@@ -311,6 +311,7 @@ function closeProjectModal() {
   modal.classList.remove("open");
   document.body.style.overflow = "";
   if (lastFocusedEl) lastFocusedEl.focus();
+  document.getElementById("lightboxOverlay").classList.remove("open");
 }
 
 function initModal() {
@@ -330,6 +331,82 @@ function initModal() {
       setTimeout(() => openProjectModal(link.dataset.openProject), 400);
     });
   });
+}
+
+/* ---------- Gallery lightbox (fullscreen screenshot view) ---------- */
+let lightboxLastFocusedEl = null;
+
+function initLightbox() {
+  const overlay = document.getElementById("lightboxOverlay");
+  const img = document.getElementById("lightboxImg");
+  const counter = document.getElementById("lightboxCounter");
+  const closeBtn = document.getElementById("lightboxClose");
+  const prevBtn = document.getElementById("lightboxPrev");
+  const nextBtn = document.getElementById("lightboxNext");
+  const expandBtn = document.getElementById("galleryExpand");
+
+  function render() {
+    if (!gallerySlider || !gallerySlider.images.length) return;
+    img.src = gallerySlider.images[gallerySlider.index];
+    img.alt = `Screenshot ${gallerySlider.index + 1}`;
+    counter.textContent = `${gallerySlider.index + 1} / ${gallerySlider.images.length}`;
+  }
+
+  function open() {
+    if (!gallerySlider || !gallerySlider.images.length) return;
+    render();
+    lightboxLastFocusedEl = document.activeElement;
+    overlay.classList.add("open");
+    closeBtn.focus();
+  }
+
+  function close() {
+    overlay.classList.remove("open");
+    if (lightboxLastFocusedEl) lightboxLastFocusedEl.focus();
+  }
+
+  function next() {
+    gallerySlider.next();
+    render();
+  }
+
+  function prev() {
+    gallerySlider.prev();
+    render();
+  }
+
+  expandBtn.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  nextBtn.addEventListener("click", next);
+  prevBtn.addEventListener("click", prev);
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!overlay.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
+  });
+
+  let touchStartX = 0;
+  overlay.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+  overlay.addEventListener(
+    "touchend",
+    (e) => {
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(dx) > 40) dx > 0 ? prev() : next();
+    },
+    { passive: true }
+  );
 }
 
 /* ---------- Loader ---------- */
@@ -485,6 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initViewAllProjects();
   initGallerySlider();
   initModal();
+  initLightbox();
   initLoader();
   initScrollProgress();
   initNavbar();
